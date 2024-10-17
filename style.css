@@ -1,0 +1,954 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    scroll-behavior: smooth;
+}
+p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+a,
+a:hover,
+a:focus{
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/* Side Bar */
+
+.wrapper{
+    display: flex;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+#sidebar {
+    min-width: 260px;
+    max-width: 260px;
+    background: #3c3f58;
+    color: #fff;
+    transition: all 0.3s;
+    height: 100%;
+    position: fixed;
+}
+
+#sidebar .sidebar-header{
+    padding: 20px;
+    background: #2e3047;
+}
+ .sidebar-header img{
+    width: 100%;
+    border-radius: 50%;
+    border: 10px solid #3c3f58;
+}
+#link1 .sidebar-header{
+    padding: 20px;
+    margin-top: -50px;
+    background: #2e3047;
+}
+#sidebar ul.components{
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b; 
+}
+#link1 ul.components{
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b; 
+}
+
+#sidebar ul li a{
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    margin-left: 15px;
+    display: flex;
+    
+}
+#sidebar ul li a i {
+    padding-right:8px ;
+}
+#link1 ul li a{
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover,
+#sidebar ul li a:active{
+    color: #3bba9c;
+    /* background: #fff; */
+}
+
+#link1 ul li a:hover{
+    color: #3bba9c;
+    /* background: #fff; */
+}
+#sidebar ul li.active>a,
+a[aria-expanded="true"]{
+    color: #fff;
+}
+a[data-bs-toggle="collapse"]{
+    position: relative;
+}
+.dropdown-toggle::after{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+   
+}
+nav ul ul a{
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #3c3f58;
+}
+
+#hamburgerMenu { 
+    width: 100%; top: 13px; 
+    display: none;
+    position: absolute;
+}
+#hamburgerMenu input[type=checkbox]#chkMenu{ display: none; }
+
+#hamburgerMenu input[type=checkbox]#chkMenu + label{
+    cursor: pointer; background-color: transparent; display: block;
+    /* border: 1px dashed rgb(12, 246, 0);  */
+    width: 40px; height: 30px;
+    position: relative; z-index: 100; margin-left: auto; right: 20px; top: 4px;
+    
+}
+#hamburgerMenu input[type="checkbox"]#chkMenu + label div[class^="line"]{
+    width: 75%; height: 3px; background-color: rgb(20, 148, 0);
+    position: absolute; border-radius: 5px; left: 5px;
+    transition: all ease-in-out 500ms;
+}
+#hamburgerMenu input[type="checkbox"]#chkMenu + label div[class="line1"]{
+    top: 5px;
+}
+#hamburgerMenu input[type="checkbox"]#chkMenu + label div[class="line2"]{
+    top: 13px; height: 1px;
+}
+#hamburgerMenu input[type="checkbox"]#chkMenu + label div[class="line3"]{
+    top: 21px;
+}
+
+#hamburgerMenu input[type="checkbox"]#chkMenu:checked + label div[class="line1"]{
+    top: 13px; transform: rotate(225deg);
+}
+#hamburgerMenu input[type="checkbox"]#chkMenu:checked + label div[class="line2"]{
+    top: 13px; top: 15px; transform: rotate(225deg);
+    opacity: 0;
+}
+#hamburgerMenu input[type="checkbox"]#chkMenu:checked + label div[class="line3"]{
+    top: 13px;  transform: rotate(-225deg);
+}
+
+#hamburgerMenu input[type=checkbox]#chkMenu ~ #link1 {
+    position: absolute; z-index: 99; overflow: hidden;
+    transition: all ease-in-out 500ms; 
+    min-width: 260px;
+    max-width: 260px;
+    background: #3c3f58;
+    color: #fff;
+    transition: all 0.3s;
+    height: 0;
+    margin-top: -90px;
+}
+#hamburgerMenu input[type=checkbox]#chkMenu:checked ~ #link1 {
+    left: 0; height: 775px;  
+    padding-top: 90px;
+    position: fixed;
+}
+
+
+@media all and (max-width: 1285px) {
+    .wrapper .hamburger #sidebar{display: none;}
+    .wrapper #hamburgerMenu{display: block; position: fixed;}
+    .wrapper #content{margin-left: 0;}
+    .wrapper #hamburgerMenu #link1 {position: relative;}
+}
+
+#content{
+    width: 100%;
+    /* padding: 20px; */
+    min-height: 1000vh;
+    transition: all 0.3s;
+    margin-left: 260px;
+}
+#content #home{
+    background:#3c3f58;
+    width: 100%;
+    height: 730px;
+    display: flex;
+}
+#content #home .left {
+    width: 300px;
+    
+}
+#content #home .left img{
+    width: 100%;
+    border-radius: 50%;
+    margin-top: 200px;
+}
+#content #home .right{
+    text-align: center;
+}
+#content #home .right h6{
+    font-weight: 600;
+    color: #aaaaaa;
+    font-size: 17px;
+}
+#content #home .right h1{
+    font-weight: 800;
+    color: #3bba9c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#content #home .right h3{
+    font-weight: 600;
+    color: #aaaaaa;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+#content #home .right a{
+    color: #aaaaaa;
+    font-weight: 600;
+    height: 50px;
+    width: 150px;
+    border: 1px solid #aaaaaa;
+    align-content: center;
+    border-radius: 30px;
+}
+#content #home .right a:hover{
+    background: #3bba9c;
+    color: #fff;
+}
+#content #home .right .home-medai {
+    margin-top: 10px;
+    margin-left: 38px;
+}
+
+#content #home .right .home-medai ul li a {
+    margin-left: 4px;
+    padding: 10px;
+    color: gray;
+    border: none;
+    font-size: 25px;
+    margin-left: 16px;
+}
+#content #home .right .home-medai a:hover {
+    background: transparent;
+    color: #3bba9c;
+}
+@media all and (max-width: 946px) {
+    #content #home {display: block; min-height: 800px; }
+    #content #home .left {margin-left: auto;margin-right: auto;margin-top: -100px; margin-bottom: 10px}
+    #content #home .right .home-medai{margin-left: 40%; }
+}
+@media all and (max-width: 441px) {
+    #content #home .right .home-medai{margin-left: 26%; }
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+#about{
+    margin-top: 50px;
+}
+#about .top{
+    text-align: center;
+}
+#about .top h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #3c3f58;
+}
+#about .top p{
+    text-align: justify;
+    color: #3c3f58;
+}
+#about .button {
+    display: flex;
+    width: 100%;
+}
+#about .button .left{
+    width: 35%;
+    /* height: 50%; */
+}
+#about .button .left img{
+    width: 100%;
+    border-radius: 30px;
+}
+#about .button .right{
+    width: 65%;
+    
+    flex-wrap: wrap;
+    /* height: 50%; */
+}
+#about .button .right p{
+    text-align: justify;
+    padding: 15px;
+    
+    font-weight: 300;
+    font-size: 15px;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#about .button .right div {
+    width: 100%;
+    
+    margin-top: -20px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+
+}
+#about .button .right div div{
+    display: flex;
+    width: 50%;
+    margin-bottom: -30px;
+    flex-wrap: nowrap;
+}
+#about .button .right div div span{
+    padding-left: 15px;
+    font-size: 17px;
+    
+}
+#about .button .right div div p{
+    margin-top: 15px;
+    margin-left: -20px;
+    /* display: block; */
+    font-size: 17px;
+    flex-wrap: wrap;
+}
+#about .button .right div div p span{
+    flex-wrap: wrap;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@media all and (max-width: 946px) {
+    #about .button {display: block; min-height: 800px; }
+    #about .button .left {width: 100%; margin: 0; padding: 0;}
+    #about .button .right {width: 100%; margin: 0; padding: 0;}
+    #about .button .right div{display: block; margin: 0; padding: 0;}
+    #about .button .right div div{width: 100%; margin: 0;margin-top: -40px; margin-bottom: -40px; padding: 0;}
+    #about .skills_section .skills_main{display: block;}
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rancho&family=Water+Brush&display=swap');
+
+
+.skills_section{
+    width: 100%;
+    height: 100vh;
+    padding: 0px 15px;
+    /* background-color: rgba(0, 0, 0, 0.082); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.skills_head{
+    width: 100%;
+    /* margin-bottom: 100px; */
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #3c3f58;
+}
+.skills_head h2{
+    font-size: 30px;
+    margin-bottom: -5px;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+}
+.skills_head h2 span{
+    color: #3bba9c;
+}
+.skills_main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+}
+.skills_main .skill_bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 10px;
+}
+.skill_bar .info p:nth-child(2){
+    font-weight: 500;
+}
+.skill_bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: #3c3f58;
+    border-radius: 25px;
+    margin-top: 5px;
+    position: relative;
+}
+.skill_bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: #3bba9c;
+    border-radius: 25px;
+}
+.skill_bar .bar .html{
+    width: 95%;
+    animation: html 2s;
+}
+@keyframes html {
+    0%{
+        width: 0%;
+    }100%{
+        width: 95%;
+    }
+}
+.skill_bar .bar .css{
+    width: 80%;
+    animation: css 2s;
+}
+@keyframes css {
+    0%{
+        width: 0%;
+    }100%{
+        width: 80%;
+    }
+}
+.skill_bar .bar .sass{
+    width: 60%;
+    animation: sass 2s;
+}
+@keyframes sass {
+    0%{
+        width: 0%;
+    }100%{
+        width: 60%;
+    }
+}
+.skill_bar .bar .js{
+    width: 50%;
+    animation: css 2s;
+}
+@keyframes js {
+    0%{
+        width: 0%;
+    }100%{
+        width: 50%;
+    }
+}
+.skill_bar .bar .react{
+    width: 50%;
+    animation: react 2s;
+}
+@keyframes react {
+    0%{
+        width: 0%;
+    }100%{
+        width: 50%;
+    }
+}
+.skill_bar .bar .node{
+    width: 50%;
+    animation: node 2s;
+}
+@keyframes node {
+    0%{
+        width: 0%;
+    }100%{
+        width: 50%;
+    }
+}
+.skill_bar .bar .express{
+    width: 50%;
+    animation: express 2s;
+}
+@keyframes express {
+    0%{
+        width: 0%;
+    }100%{
+        width: 50%;
+    }
+}
+.skill_bar .bar .mongo{
+    width: 60%;
+    animation: mongo 2s;
+}
+@keyframes mongo {
+    0%{
+        width: 0%;
+    }100%{
+        width: 60%;
+    }
+}
+#project{
+    width: 100%;
+}
+#project #designer{
+    display: block;
+    /* justify-content: center; */
+}
+#project #designer div h1{
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #3c3f58;
+}
+#project #designer .button{
+    width: 100%;
+    /* gap: 20px; */
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+#project #designer .button .item{
+    width: 25%;
+    border: 1px solid gray;
+    border-radius: 30px;  
+    padding-bottom: 10px;
+    
+}
+#project #designer .button .item img{
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+}
+#project #designer .button .item h3{
+    margin-top: -10px;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    /* text-transform: uppercase; */
+    color: #3c3f58;
+}
+#project #designer .button .item button{
+    width: 40%;
+    margin-left: 30%;
+    color: #3c3f58;
+    border: 1px solid #3c3f58;
+    background-color: transparent;
+    align-self: center;
+   border-radius: 30px;
+}
+#project #designer .button .item button:hover{
+    background-color: #3c3f58;
+    color: #3bba9c;
+}
+#project #webDevelop{
+    display: block;
+    /* justify-content: center; */
+}
+#project #webDevelop div h1{
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #3c3f58;
+}
+#project #webDevelop .button{
+    width: 100%;
+    display: flex;
+    /* gap: 20px; */
+    padding: 40px;
+    justify-content: space-between;
+}
+#project #webDevelop .button .item{
+    width: 25%;
+    border: 1px solid gray;
+    border-radius: 30px;  
+    padding-bottom: 10px;
+    
+}
+#project #webDevelop .button .item img{
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+}
+#project #webDevelop .button .item h3{
+    margin-top: -10px;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    /* text-transform: uppercase; */
+    color: #3c3f58;
+}
+#project #webDevelop .button .item div{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-between;
+}
+#project #webDevelop .button .item button{
+    width: 45%;
+    /* margin-left: 30%; */
+    color: #3c3f58;
+    border: 1px solid #3c3f58;
+    background-color: transparent;
+    align-self: center;
+   border-radius: 30px;
+}
+#project #webDevelop .button .item button:hover{
+    background-color: #3c3f58;
+    color: #3bba9c;
+}
+@media all and (max-width: 946px) {
+    #project #designer .button{display: block;}
+    #project #webDevelop .button{display: block;}
+    #project #designer .button .item{width: 100%; margin: 0; margin-bottom: 10px;}
+    #project #webDevelop .button .item{width: 100%; margin: 0; margin-bottom: 10px;}
+}
+#service .top{
+    text-align: center;
+}
+#service .top h1{
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #3c3f58;
+}
+#service .button{
+    padding: 30px 0;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+#service .button .item{
+    width: 30%;
+    background-color: #3c3f58;
+    border-radius: 20px;
+    min-height: 380px;
+
+}
+#service .button .item img{
+    width: 35%;
+    margin-left: 33%;
+}
+#service .button .item h3{
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #3bba9c;
+   
+}
+#service .button .item p{
+    padding:  10px;
+    text-align: center;
+    color: #fff;
+}
+#service .button .item button{
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    width: 140px;
+    height: 40px;
+    margin-left: 28%;
+}
+#service .button .item button:hover{
+    background-color: #3bba9c;
+    color: #3c3f58;
+    border-color: #3c3f58;
+}
+@media all and (max-width: 946px) {
+    #service .button {display: block;}
+    #service .button .item{width: 100%; margin: 0; margin-bottom: 10px;}
+    
+}
+#contact {
+    width: 100%;
+    display: block;
+}
+#contact .top{
+    /* margin-top: 10px; */
+    padding: 20px;
+}
+#contact .top h1{
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #3c3f58;
+}
+
+#contact .button{
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+#contact .button .left{
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 2px 2px 1px rgb(206, 206, 206);
+    border-radius: 10px;
+    padding: 30px;
+}
+#contact .button .left .item div{
+    width: 80%;
+    margin-bottom: 10px;
+}
+#contact .button .left .item div span{
+    font-size: 30px;
+    color: #3c3f58;
+    transition: all 0.3s;
+}
+#contact .button .left .item div span:hover{
+    color: #3bba9c;
+}
+#contact .button .left .item div div {
+    display: block;
+    
+}
+#contact .button .left .item div div h3{
+    font-size: 20px;
+    font-weight: 800;
+    color: #3c3f58;
+    margin-top: 2px;
+}
+#contact .button .left .item div div p{
+    margin-top: -7px;
+    font-size: 10px;
+    color: #3c3f58;
+}
+#contact .button .left .map{
+    width: 100%;
+
+}
+#contact .button .left .map p iframe{
+    width: 100%;
+}
+#contact .button .right {
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 2px 2px 1px rgb(206, 206, 206);
+    border-radius: 10px;
+    padding: 40px;
+    display: block;
+    /* margin-top: 50px; */
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #3c3f58;
+}
+#contact .button  .right h3{
+    font-size: 25px;
+    margin-top: -10px;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #3c3f58;
+}
+#contact .button .right .name-text{
+    display: flex;
+    gap: 10px;
+}
+#contact .button .right .name-text .first-name{
+    width: 50%;
+}
+#contact .button  .right .name-text .last-name{
+    width: 50%;
+}
+#contact .button .right .name-text p{
+    color: #3c3f58;
+    font-size: 12px;
+    font-weight: 1000;
+    text-align: left;
+
+    margin-bottom: 6px;
+}
+#contact .button  .right .name-text input{
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid rgb(220, 220, 220);
+}
+#contact .button  .right .email-text{
+    display: block;
+    
+}
+#contact .button  .right .email-text p{
+    color: #3c3f58;
+    font-weight: 1000;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+#contact .button  .right .email-text .email-add{
+    width: 100%;
+}
+#contact .button  .right .email-text .mobile-number{
+    width: 100%;
+}
+
+#contact .button  .right h4{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #3c3f58;
+    font-weight: 700;
+}
+#contact .button  .right .text-contect{
+    width: 95%;
+    text-align: justify;
+    height: 250px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    background-color: transparent;
+}
+#contact .button  .right .email-text input{
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid rgb(220, 220, 220);
+}
+#contact .button  .right button{
+    background-color: transparent;
+    color: #3c3f58;
+    border: 1px solid #1c1c1c;
+    border-radius: 30px;
+    width: 140px;
+    height: 40px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+#contact .button .right button:hover{
+    background-color: #3bba9c;
+    color: #2e3047;
+}
+@media all and (max-width: 946px) {
+    #contact .button {display: block;}
+    #contact .button .left{width: 100%; margin: 0; margin-bottom: 10px;}
+    #contact .button .right{width: 100%; margin: 0; margin-bottom: 10px;}
+    .scrollTop{margin-left: 85%;}
+}
+
+/* for view project */
+.read-more-cont{
+	display: none;
+}
+
+.popup-box{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top:0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 500;
+	visibility: hidden;
+	opacity:0;
+	transition: all 0.5s ease-in-out;
+}
+.popup-box.open{
+  visibility: visible; 
+	opacity:1;	
+}
+.popup-box .popup-content{
+	background-color: #ffffff;
+	width: 97%;
+    min-height: 400px;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	border-radius: 8px;
+}
+
+.popup-box .popup-header{
+	padding: 15px 40px 15px 15px;
+	border-bottom: 1px solid #dddddd;
+}
+
+.popup-box .popup-header h3{
+	margin:0;
+	color:#E91E63;
+	font-size: 20px;
+}
+.popup-box .popup-header .popup-close-icon{
+	position: absolute;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #d53636;
+    font-size: 28px;
+    line-height: 30px;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+.popup-box .popup-body{
+	padding: 15px;
+	max-height: 460px;
+	overflow-y: auto;
+}
+.popup-box .popup-body img{
+	width: 100%;
+	display: block;
+	margin-top: 15px;
+}
+.popup-box .popup-body video{
+	width: 100%;
+	display: block;
+	margin-top: 15px;
+}
+.popup-box .popup-body p{
+    color: rgba(138, 82, 4, 0.705);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+	margin:0 0 15px;
+    text-align: justify;
+}
+.popup-box .popup-footer{
+	padding: 15px;
+	border-top:1px solid #dddddd;
+	text-align: right;
+}
+.popup-box .popup-footer .btn{
+	padding: 8px 15px;
+	border:1px solid #555555;
+	color:#555555;
+	font-size: 16px;
+	background-color: transparent;
+	cursor: pointer;
+	border-radius: 4px;
+}
+/* End view project */
+
+.scrollTop{
+    margin-left: 95%;
+    position:  fixed;
+    margin-top: 650px;
+    margin-right: 20px;
+    color: #3bba9c;
+    cursor: pointer;
+    font-size: 40px;
+    transition: all 0.5s ease 0s;
+    /* display: none; */
+    
+}
+.scrollTop:hover{
+    color: #2e3047;
+}
+@media all and (max-width: 600px) {
+    .scrollTop{margin-left: 85%;}
+}
+
